@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import CartContext from "../../context/CartContext";
 import CartReducer from '../../reducers/Cart';
 
-const Layout = ({children}) => {
+const Layout = () => {
     let carts = JSON.parse(localStorage.getItem('carts'));
     const [state,dispatch] = useReducer(CartReducer,{
         carts: carts

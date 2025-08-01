@@ -1,0 +1,10 @@
+button{
+  padding: 1rem 2rem;
+  background-color: #ffebcd;
+  border-radius: 10px;
+  border: none;
+  margin: 0.5rem;
+}
+.active{
+  background-color: #969393;
+}

@@ -1,0 +1,65 @@
+import React from 'react';
+
+
+//stateless function
+// const Blog = () =>{
+//     <div>Blog</div>
+// }
+
+
+class Blog extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            clicked : 0,
+            updateNumber : 0,
+            didMount : false,
+        }
+    }
+    componentDidUpdate(){
+        const {updateNumber} = this.state.updateNumber;
+        if(updateNumber === 0){
+            this.setState({
+                updateNumber:this.state.updateNumber +1,
+            })
+        } 
+    }
+    componentDidMount(){
+        setTimeout( ()=>{
+            this.setState({
+                didMount:true,
+            });
+            this.handleClick();
+        },1000)
+    }
+    handleClick = () => {
+        this.setState({
+            clicked : this.state.clicked + 1,
+
+        })
+        console.log('Clicked')
+    }
+    render() {
+        const {clicked,didMount} = this.state
+        return(
+            <div>
+                <h1>Blog</h1>
+                <p>
+                    Clicked Number : {clicked}
+                </p>
+                <button onClick={this.handleClick}>
+                    Click
+                </button>
+                <h1>Component Did Mount</h1>
+                <p>
+                    Is it Mounted? {didMount?'Yes':'No'}
+                </p>
+                <h1>Component Did Update</h1>
+                <p>
+                    How many times Is it Updated? {this.state.updateNumber}
+                </p>
+            </div>
+        )
+    }
+}
+export default Blog; 

@@ -1,0 +1,8 @@
+input{
+    padding: 0.5rem 1rem;
+    margin: 2rem;
+}
+input:focus{
+    border-color: red;
+    outline: 1px solid red;
+}

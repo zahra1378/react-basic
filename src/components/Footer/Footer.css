@@ -1,0 +1,13 @@
+.Footer{
+    border-top: 1px solid gray;
+    padding: 10px;
+    margin-top: 40px;
+}
+.Footer button.Green {
+    background-color: rgba(0, 128, 49, 0.397);
+    color: #333;
+}
+.Footer button.Blue {
+    background-color: rgb(2, 19, 116);
+    color: #eee;
+}
